@@ -6,3 +6,6 @@ exports.world = function () {
     console.log('hello world');
 }
 
+exports.sub = function (a, b) {
+    console.log(a + b);
+}
