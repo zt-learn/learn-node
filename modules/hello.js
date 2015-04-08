@@ -9,9 +9,3 @@ exports.world = function () {
 exports.sub = function (a, b) {
     console.log(a + b);
 }
-
-function list(a, b) {
-    console.log(a + b);
-}
-
-exports.test = list;
