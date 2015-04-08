@@ -1,6 +1,6 @@
 var hello = require('./hello');
 
-var a = 1;
-var b = 23;
+console.log(hello.add(1, 2));
 
-console.log(hello.add(a, b));
+
+hello.test(1,2);
