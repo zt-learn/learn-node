@@ -2,5 +2,6 @@ var hello = require('./hello');
 
 console.log(hello.add(1, 2));
 
+var people = require('./people');
 
-hello.test(1,2);
+console.log(people.name());
