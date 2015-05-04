@@ -7,6 +7,5 @@ var str = '{"name":"leo"}';
 //alert('adf');
 var strToObj = JSON.parse(str);
 
-
 console.info(strToObj.name);
 

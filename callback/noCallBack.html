@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle(1000);
+                alert("现在段落被隐藏了");
+            });
+        });
+    </script>
+</head>
+<body>
+<button>隐藏</button>
+<p>这是一个段落，内容很少</p>
+</body>
+</html>
