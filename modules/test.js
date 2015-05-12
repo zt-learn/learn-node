@@ -5,4 +5,3 @@ var people = require('./people');
 console.log(hello.add(1, 2));
 hello.world();
 
-

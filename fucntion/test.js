@@ -3,4 +3,17 @@
  */
 var fc = require("./function");
 
-console.log(fc.mul(1, 2));
+function hello(callback) {
+    var name;
+    name = 'sadfasd';
+    console.log(name);
+    console.log(name);
+    name = 'new';
+    callback();
+}
+
+function test() {
+    console.log('test');
+}
+
+hello(test);

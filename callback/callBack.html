@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
-    </script>
-    <script>
-        $(document).ready(function () {
-            $("button").click(function () {
-                alert('start');
-                $("p").toggle("slow", function () {
-                    alert("段落现在被隐藏了");
-                });
-                alert('end');
-            });
-        });
-    </script>
-</head>
-<body>
-<button>隐藏</button>
-<p>我们段落内容，点击“隐藏”按钮我就会消失</p>
-</body>
-</html>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    $.post('http://libs.baidu.com/jquery/1.10.2/jquery.min.js',
+            {},
+            function () {
+                alert('shoudao');
+            }
+    );
+    alert('已发送');
+</script>
