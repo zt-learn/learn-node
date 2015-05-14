@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost:8080');
+    // 当服务端发送一条消息到客户端，message 事件即被触发。我们把消息在控制台打印出来
+    socket.on('message', function(data){ console.log(data) })
+</script>
+</body>
+</html>  
