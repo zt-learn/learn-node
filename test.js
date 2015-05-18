@@ -1,6 +1,9 @@
-/**
- * Created by leo on 2015/4/10.
- */
-setTimeout(function () {
-    console.log(1)
-}, 1000);
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+    console.log(req['readable']);
+    res.send('hello world');
+});
+
+app.listen(3001);

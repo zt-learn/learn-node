@@ -14,4 +14,12 @@ function add(teacherName, students) {
     )
 }
 
-exports.add = add
+function test() {
+    console.log('test');
+}
+
+var a = 'a';
+
+exports.add = add;
+exports.test = test;
+module.exports.a = a;

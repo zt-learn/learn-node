@@ -57,13 +57,13 @@
     <input id="m" autocomplete="off"/>
     <button>Send</button>
 </form>
-    <script src="http://10.10.10.123/client/socket.js"></script>   
-    <script src="http://10.10.10.123/client/jquery-1.11.1.js"></script>  
+<script src="socket.js"></script>
+<script src="jquery-1.11.1.js"></script>
 
-    <script>   
-      var socket = io.connect('http://localhost:3000');   
-      socket.on('message', function(data){
-      })
+<script>
+    var socket = io.connect('http://localhost:3000');
+    socket.on('message', function (data) {
+    })
     $('form').submit(function () {
         socket.emit('message', $('#m').val());
         $('#m').val('');
@@ -74,6 +74,6 @@
         $('#messages').append($('<li>').text(msg));
     });
 
-    </script>   
-  </body>  
+</script>
+</body>
 </html>  

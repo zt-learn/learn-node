@@ -7,7 +7,7 @@ function learn(something) {
 }
 
 function we(callback, something) {
-    something += 'is cool';
+    something += ' is cool';
     callback(something);
 }
 
