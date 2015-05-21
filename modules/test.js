@@ -7,11 +7,14 @@
  * 理解到exports是module.exports的引用才是最关键的
  */
 
-exports.sub = function (a, b) {
-    if (a > b)
+exports.sub = function (a, b, callback) {
+    if (a > b) {
+        callback(a, b);
         return a - b;
-    else
+    } else {
+        callback(a, b);
         return b - a;
+    }
 };
 
 module.exports.add = function (a, b) {
