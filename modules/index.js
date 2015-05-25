@@ -11,9 +11,9 @@ var test = require('./test.js');
 //console.log(klass.a);
 
 
-var num = test.sub(2, 1, function (a, b) {
+test.sub(2, 1, function (a, b) {
     console.log('a:' + a);
-    console.log('b:' + b);
+    //console.log('b:' + b);
 });
 
-console.log(num);
+//console.log(num);

@@ -12,6 +12,7 @@ exports.sub = function (a, b, callback) {
         callback(a, b);
         return a - b;
     } else {
+
         callback(a, b);
         return b - a;
     }

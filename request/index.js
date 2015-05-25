@@ -3,12 +3,15 @@
  */
 var req = require('request');
 req('http://www.baidu.com', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        console.log(body);
-    }
-    if (error) {
-        console.log(error);
-    }
+    console.log(response);
+
+
+    //if (!error && response.statusCode == 200) {
+    //    console.log(body);
+    //}
+    //if (error) {
+    //    console.log(error);
+    //}
 });
 
 var a = Buffer;
