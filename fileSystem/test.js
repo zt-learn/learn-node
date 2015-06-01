@@ -11,3 +11,17 @@ fs.readFile('info.txt', function (err, file) {
     console.log('start 1 read file');
 });
 
+function readIP(path, callback) {
+    fs.readFile(path, function (err, data) {
+        if (err) {
+            callback(err)
+        } else {
+            try {
+                data = JSON.parse(data)
+                callback(null, data)
+            } catch (error) {
+                callback(error)
+            }
+        }
+    })
+}
