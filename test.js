@@ -1,9 +1,8 @@
-var express = require('express');
-var app = express();
+var a = {
+    1: "e",
+    2: 'b'
+};
 
-app.get('/', function (req, res) {
-    console.log(req['readable']);
-    res.send('hello world');
-});
+a.c=12;
 
-app.listen(3001);
+console.log(a);

@@ -5,15 +5,16 @@ var klass = require('./klass');
 var test = require('./test.js');
 
 //klass.add('sb', ['bfm', 'gfs', 'gfs', 'bfm']);
-//klass.test();
+klass.test()
+    .test()
 //
 //var a = 'sdfs';
 //console.log(klass.a);
 
-
-test.sub(2, 1, function (a, b) {
-    console.log('a:' + a);
-    //console.log('b:' + b);
-});
+//
+//test.sub(2, 1, function (a, b) {
+//    console.log('a:' + a);
+//    //console.log('b:' + b);
+//});
 
 //console.log(num);

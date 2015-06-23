@@ -27,7 +27,7 @@ console.log(add(2, 3));
  */
 (function (str) {
     console.log(str);
-})('niming hanshu ');
+})('niming hansssshu ');
 
 console.log((function (x, y) {
     return x + y;

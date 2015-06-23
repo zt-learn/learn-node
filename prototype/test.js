@@ -8,15 +8,21 @@ function Dog(name) {
 /*Dog对象共有的属性*/
 Dog.prototype.type = 'life';
 
-/*实例A*/
+/*实例*/
 dogA = new Dog('dogA');
+dogB = new Dog('dogB');
+
 console.log(dogA.name);
 console.log(dogA.sex);
-console.log(dogA.type);
-console.log('*********************');
-Dog.prototype.type = 'heh';
-/*实例B*/
-dogB = new Dog('dogB');
+
 console.log(dogB.name);
 console.log(dogB.sex);
+
+
+console.log(dogA.type);
+Dog.prototype.type = 'heh';
 console.log(dogB.type);
+
+
+
+
