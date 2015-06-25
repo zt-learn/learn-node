@@ -9,8 +9,8 @@ function Dog(name) {
 Dog.prototype.type = 'life';
 
 /*实例*/
-dogA = new Dog('dogA');
-dogB = new Dog('dogB');
+var dogA = new Dog('dogA');
+var dogB = new Dog('dogB');
 
 console.log(dogA.name);
 console.log(dogA.sex);

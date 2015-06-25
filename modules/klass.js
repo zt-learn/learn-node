@@ -1,25 +1,36 @@
 /**
  * Created by leo on 2015/5/12.
  */
-var student = require('./student');
-var teacher = require('./teacher');
+//var student = require('./student');
+//var teacher = require('./teacher');
 
-function add(teacherName, students) {
-    teacher.add(teacherName);
-
-    students.forEach(
-        function (item, index) {
-            student.add(item);
-        }
-    )
+function Klass() {
+    console.log("Klass test");
 }
 
-function test() {
+Klass.prototype.test = function () {
     console.log('test');
+};
+
+Klass.prototype.create = function () {
+    console.log("create");
+};
+
+Klass.prototype.delete = function () {
+    console.log("delete");
+};
+
+Klass.prototype.update = function () {
+    console.log("update");
+};
+
+Klass.prototype.find = function () {
+    console.log('find');
+};
+
+module.exports.l = Klass;
+
+function nima() {
+    console.log('nima');
 }
-
-var a = 'a';
-
-exports.add = add;
-exports.test = test;
-module.exports.a = a;
+module.exports.a = nima;
