@@ -5,6 +5,7 @@
 function Klass(name, age) {
     this.name = name;
     this.age = age;
+    console.log('Klass is init .....');
 }
 
 Klass.prototype.test = function () {
