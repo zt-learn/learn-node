@@ -1,11 +1,10 @@
 /**
- * Created by leo on 2015/5/12.
+ * 在js中function就是类
  */
-//var student = require('./student');
-//var teacher = require('./teacher');
 
-function Klass() {
-    console.log("Klass test");
+function Klass(name, age) {
+    this.name = name;
+    this.age = age;
 }
 
 Klass.prototype.test = function () {
@@ -28,9 +27,4 @@ Klass.prototype.find = function () {
     console.log('find');
 };
 
-module.exports.l = Klass;
-
-function nima() {
-    console.log('nima');
-}
-module.exports.a = nima;
+module.exports = Klass;

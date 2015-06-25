@@ -1,24 +1,12 @@
 /**
- * Created by leo on 2015/5/12.
+ * 在js中：function就是类
+ *
  */
 var klass = require('./klass');
-var test = require('./test');
-var student = require('./student');
 
 
-klass.a();
-var a = new klass.l;
+var a = new klass("sb",'123');
 a.test();
-//Klass.add('sb', ['bfm', 'gfs', 'gfs', 'bfm']);
 
-//
-//var a = 'sdfs';
-//console.log(Klass.a);
-
-//
-//test.sub(2, 1, function (a, b) {
-//    console.log('a:' + a);
-//    //console.log('b:' + b);
-//});
-
-//console.log(num);
+console.log(a.name);
+console.log(a.age);
