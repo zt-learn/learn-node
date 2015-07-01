@@ -3,7 +3,7 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/callback/callback.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/modules/index.js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/modules/klass.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/modules/leo.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/modules/student.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/modules/teacher.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/mongoose/mongo.js" charset="GBK" />
