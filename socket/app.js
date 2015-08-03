@@ -14,7 +14,7 @@ io.on('connection', function (socket) {
     });
 });
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3088);
 
 var server = http.listen(app.get('port'), function () {
     console.log('start at port:' + server.address().port);
