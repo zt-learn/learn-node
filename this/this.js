@@ -9,10 +9,11 @@ console.log(this);
  * 2 作为单纯的函数调用
  *   这里this指向了全局对象，即window。在严格模式中，则是undefined。
  */
-console.log("******************3******************");
+console.log("******************2******************");
 var x = 1;
+
 function fooCoder(x) {
-    this.x = x;
+    this.x=x;
     console.log(this.x);
 }
 fooCoder('333foo');
@@ -22,7 +23,7 @@ console.log(x);
  * 3作为构造函数
  *  函数内部的this指向新创建的对象。
  */
-console.log("******************4******************");
+console.log("******************3******************");
 var f = new fooCoder(2);
 console.log(f.x);
 
@@ -31,16 +32,16 @@ console.log(f.x);
  * 4.作为对象的方法调用
  *   this指向person对象，即当前对象
  */
-console.log("******************2******************");
+console.log("******************4******************");
 var name = "clever coder";
 var person = {
     name: "foocoder",
     hello: function (sth) {
+        var name = 'hehe';
         console.log(this.name + " says " + sth);
     }
 };
 person.hello("hello world");
-
 
 /**
  * 5内部函数
