@@ -1,6 +1,5 @@
 var fs = require('fs');
 
-/*“Ï≤Ω∂¡»°*/
 fs.readFile('file/1.txt', function (err, data) {
     console.log(data.toString());
 });
