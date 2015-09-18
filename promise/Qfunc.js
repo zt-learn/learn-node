@@ -40,5 +40,5 @@ func1('file/1.txt')
   .then(func2)
   .then(func3)
   .catch(function (err) {
-    console.log(err);
+    console.log('catch:'+err);
   });
