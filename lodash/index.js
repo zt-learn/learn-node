@@ -18,4 +18,7 @@ var a = _.defaults({
 }, {
   b: 4444
 });
+
+console.log(_.indexOf([1,2,1,2],2));
+
 console.log(a);

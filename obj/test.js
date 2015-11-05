@@ -1,3 +1,6 @@
+
+
+
 var o = {
     time: 12,
     name: 'leo',
@@ -8,8 +11,11 @@ var o = {
     }
 };
 
-o.add = function (a, b) {
-    return a * b;
-};
 
-console.log(o.add(1, 2));
+
+//
+//o.add = function (a, b) {
+//    return a * b;
+//};
+//
+//console.log(o.add(1, 2));
