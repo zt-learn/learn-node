@@ -7,3 +7,7 @@ function f1(c) {
 
     f2();
 }
+
+function(){
+	
+}
