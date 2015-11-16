@@ -19,7 +19,7 @@ var func1 = function (fileName, callback) {
   return deferred.promise.nodeify(callback);
 };
 
-var func2 = function (fileName,callback) {
+var func2 = function (fileName, callback) {
   var deferred = Q.defer();
   fs.readFile(fileName, function (err, data) {
     if (err) {
@@ -32,7 +32,7 @@ var func2 = function (fileName,callback) {
 };
 
 Q.all([
-  func1('file/1.txt'),func2('file/2.txt')
+  func1('file/1.txt'), func2('file/2.txt')
 ]).spread(function () {
   console.log(arguments)
 });
