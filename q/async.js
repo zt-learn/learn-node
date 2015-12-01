@@ -4,11 +4,10 @@
 var Q = require('q');
 var fs = require('fs');
 
-
 var readFile = function (path) {
   var deferred = Q.defer();
-
   fs.readFile(path, function (err, result) {
+    debugger
     if (err) {
       deferred.reject(err);
     } else {
