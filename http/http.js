@@ -11,7 +11,6 @@ http.createServer(function (req, response) {
   request(url).pipe(response);
 
 
-
   //var img = fs.readFileSync('./doodle.png');
   //response.end(img);
 

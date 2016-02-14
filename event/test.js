@@ -9,9 +9,9 @@ event.on('test', function () {
     console.log('test occur');
 });
 
-setTimeout(function () {
+setInterval(function () {
     event.emit('test');
-}, 5000);
+}, 1000);
 
 //setTimeout(function () {
 //    event.emit('some_event');

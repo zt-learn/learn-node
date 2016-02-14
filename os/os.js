@@ -3,10 +3,17 @@
  */
 var os = require('os');
 
-console.log(os.hostname());
-console.log(os.uptime());
-console.log(os.loadavg());
-console.log(os.arch());
-//console.log(os.cpus());
-console.log(os.endianness());
-
+var info ={
+  'os.hostname': os.hostname(),
+  'os.cpus':os.cpus(),
+  'os.homedir':os.homedir(),
+  'os.loadavg':os.loadavg(),
+  'os.networkInterfaces':os.networkInterfaces(),
+  'os.type':os.type()
+}
+var a =1 ;
+debugger
+var b=2;
+var c=a+b;
+console.log(a+b);
+console.log(info);

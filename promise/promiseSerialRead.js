@@ -5,8 +5,13 @@ function read(url) {
     return function () {
         var defer = Q.defer();
         fs.readFile(url, function (err, data) {
-            console.log(data.toString());
-            defer.resolve();
+            if(err){
+              console.log(err);
+              defer.reject(err)
+            }else{
+              console.log(data.toString());
+              defer.resolve(err);
+            }
         });
         return defer.promise;
     }
@@ -22,6 +27,8 @@ function test() {
         return defer.promise;
     }
 }
+
+// console.log(read('file/1.txt'));
 
 read('file/1.txt')()
     .then(read('file/2.txt'))
