@@ -32,7 +32,7 @@ var func2 = function (fileName, callback) {
 };
 
 Q.all([
-  func1('file/1.txt'), func2('file/2.txt')
-]).spread(function () {
-  console.log(arguments)
+  func1('file/1.txt'), func2('file/2.txt'),func1('file/3.txt')
+]).spread(function (data1,data2,data3) {
+  console.log(data1.toString(), data2.toString(),data3.toString());
 });

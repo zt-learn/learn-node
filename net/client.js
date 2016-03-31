@@ -7,7 +7,7 @@ var client = net.connect({port: 8124},
     });
 
 client.on('data', function (data) {
-    console.log(data.toString());
+    console.log(data);
     client.end();
 });
 
