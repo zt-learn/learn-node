@@ -1,3 +1,4 @@
+var events  = require('events');
 var EventEmitter = require('events').EventEmitter;
 var event = new EventEmitter();
 
@@ -5,14 +6,28 @@ var event = new EventEmitter();
 //    console.log('some_event occured.');
 //});
 
-event.on('test', function () {
-    console.log('test occur');
+event.once('test', function() {
+  console.log('test occur');
 });
 
-setInterval(function () {
-    event.emit('test');
+setInterval(function() {
+  event.emit('test');
 }, 1000);
 
-//setTimeout(function () {
-//    event.emit('some_event');
-//}, 5000);
+console.log(events.EventEmitter.listenerCount(event));
+
+// var http = require('http');
+// var server = http.createServer();
+//
+// server.on('test',function () {
+//   console.log('htpp add listener');
+// });
+// server.emit('test');
+//
+//
+// var a =1;
+// a.on('test',function () {
+//   console.log('a test ');
+// });
+//
+// a.emit('test');
