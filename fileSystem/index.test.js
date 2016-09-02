@@ -10,4 +10,11 @@ var FileTools = require('./index.js').FileTools;
 // DirTools.rmDir('./sssss')
 
 
-console.log(DirTools.readDir('./tk'));
+// console.log(DirTools.readDir('./tk'));
+
+
+// FileTools.rmFile('./tk/1.js');
+
+
+
+FileTools.createFile('./test.aa');

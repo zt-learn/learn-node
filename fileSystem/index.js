@@ -1,25 +1,47 @@
+/**
+ * create by leo 2016-9-2
+ */
+
 var fs = require('fs');
-var args = process.argv.splice(2);
 
 /**文件操作，同步版本**/
 var FileTools = {
   // 判断文件是否存在
   isExist: function(path) {
     var data = fs.existsSync(path);
-    console.log(path + ' ' + (data ? '存在' : '不存在'));
+    return data;
   },
   // 删除文件
-  rmFile: function() {},
-  // 新建／覆盖原文件内容
-  createFile: function() {},
+  rmFile: function(path) {
+    if (FileTools.isExist(path)) {
+      var data = fs.unlinkSync(path);
+    } else {
+      console.log('该文件不存在');
+      return null;
+    }
+  },
+  // 新建／覆盖／修改 原文件内容
+  createFile: function(path, data) {
+    var data = FileTools.readFile(path);
+    if (data) {
+      console.log(data.toString());
+    }
+    var data = fs.writeFileSync(path, `
+        var a = function(){
+          console.log('a')
+        }
+        a();
+      `);
+    return data;
+  },
   // 读文件
   readFile: function(path) {
-    var data = fs.readFileSync(path);
-    console.log(data.toString());
-  },
-  // 追加文件内容
-  appendFile: function() {
-    var data = fs.writeFileSync(filename, data)
+    if (FileTools.isExist(path)) {
+      var data = fs.readFileSync(path);
+      return data;
+    } else {
+      return null;
+    }
   },
   // 关闭文件
   closeFile: function() {
@@ -37,12 +59,16 @@ var DirTools = {
   mkDir: function(path) {
     if (!DirTools.isExist(path)) {
       var data = fs.mkdirSync(path);
+    } else {
+      console.log('该文件夹已存在');
     }
   },
   //删除文件夹
   rmDir: function(path) {
     if (DirTools.isExist(path)) {
       var data = fs.rmdirSync(path);
+    } else {
+      console.log('该文件夹不存在');
     }
   },
   // 读取文件夹下所有文件
