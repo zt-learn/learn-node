@@ -10,11 +10,13 @@ var FileTools = require('./index.js').FileTools;
 // DirTools.rmDir('./sssss')
 
 
-// console.log(DirTools.readDir('./tk'));
+// console.log(DirTools.readDir(process.cwd()));
 
 
 // FileTools.rmFile('./tk/1.js');
 
 
 
-FileTools.createFile('./test.aa');
+// FileTools.createFile('./newF/infos2.txt','woshi csdfa');
+
+console.log(FileTools.readFile('./tk/10.js').toString());

@@ -22,16 +22,7 @@ var FileTools = {
   },
   // 新建／覆盖／修改 原文件内容
   createFile: function(path, data) {
-    var data = FileTools.readFile(path);
-    if (data) {
-      console.log(data.toString());
-    }
-    var data = fs.writeFileSync(path, `
-        var a = function(){
-          console.log('a')
-        }
-        a();
-      `);
+    var res = fs.writeFileSync(path, data);
     return data;
   },
   // 读文件

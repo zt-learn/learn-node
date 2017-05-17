@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+    class Person {
+      constructor() {
+        this.name = 'xiaoming';
+        this.age = 12
+      }
+
+      say() {
+        console.log(this.name)
+      }
+    }
+
+    var p1 = new Person();
+    var p2 = new Person();
+
+    p1.say();
+    p2.say();
+
+
+    // 改变class,添加test方法
+    p2.__proto__.test = function () {
+      console.log('test');
+    }
+
+    p1.test();
+    p2.test();
+
+    // 修改say方法
+    p1.__proto__.say = function () {
+      console.log('hehe');
+    }
+
+    p1.say();
+    p2.say();
+  </script>
+</html>
