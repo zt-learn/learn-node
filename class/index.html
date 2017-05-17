@@ -12,11 +12,21 @@
     class Person {
       constructor() {
         this.name = 'xiaoming';
-        this.age = 12
+        this.age = 12;
+      }
+
+      // 实例不能获取静态方法
+      static breath() {
+        console.log('i can breath');
       }
 
       say() {
         console.log(this.name)
+      }
+
+      // 没有私有方法，可以用_替代
+      _secret() {
+        console.log('this my secret');
       }
     }
 
