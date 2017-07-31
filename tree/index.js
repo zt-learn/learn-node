@@ -1,7 +1,4 @@
-var tree = {
-  name: 0,
-  id: 0,
-  child: [
+var tree = [
     {
       name: 1,
       id: 1,
@@ -53,31 +50,29 @@ var tree = {
         }
       ]
     }
-  ]
-}
+]
 
 var flag = false;
 var parent = [];
-function travel(tree) {
-  var child = tree.child;
 
-  for (var i = 0; i < child.length; i++) {
-    if (child[i].id == 1024) {
+function travel(tree, father) {
+  for (var i = 0; i < tree.length; i++) {
+    if (tree[i].id == 1024) {
       flag = true;
       break;
     }
-    if ( child[i].child.length)
-      travel(child[i])
+
+    if (!flag && tree[i].child.length)
+      travel(tree[i].child, tree[i])
   }
 
   if (flag) {
     parent.push({
-      name: tree.name,
-      id: tree.id
+      name: father.name,
+      id: father.id
     })
   }
-
 }
 
-travel(tree)
+travel(tree,{name: 0,id:0})
 console.log(parent);
