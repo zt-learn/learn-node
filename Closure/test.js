@@ -1,13 +1,19 @@
-function f1(c) {
-    var n = 999;
+var arr = [];
 
-    function f2() {
-        console.log(n);
+function f1(c) {
+    var n = 9
+
+    for (var i = 0; i < n; i++) {
+      arr.push(f2(i))
     }
 
-    f2();
+    function f2(i) {
+        console.log(this, i);
+    }
 }
 
-function(){
-	
-}
+f1.call()
+
+arr.forEach(el => {
+  el.
+})
